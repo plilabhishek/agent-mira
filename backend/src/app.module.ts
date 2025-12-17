@@ -5,7 +5,7 @@ import { SavedPropertiesModule } from './saved-properties/saved-properties.modul
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://rajabhishek547_db_user:kLXtlSJQMPNAlPl9@agentmira.ugxgcbc.mongodb.net/agentmira'),
+    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb+srv://rajabhishek547_db_user:kLXtlSJQMPNAlPl9@agentmira.ugxgcbc.mongodb.net/agentmira'),
     PropertiesModule,
     SavedPropertiesModule,
   ],
